@@ -5,6 +5,8 @@ Open-source local-first application for quantitative ICS/OT cyber risk assessmen
 The software estimates how cyberattacks degrade protection layers, change scenario probability, and affect expected business loss. It combines questionnaire results, attacker assumptions, LOPA-style modeling, and report export into one web application.
 
 Copyright holder: Ian Suhih.
+<img width="2860" height="1795" alt="image" src="https://github.com/user-attachments/assets/2e077d5f-f4ac-456b-bd2c-3d1972721ff2" />
+
 
 ## Repository contents
 
