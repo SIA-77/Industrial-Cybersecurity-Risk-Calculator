@@ -10,9 +10,9 @@ if errorlevel 1 (
   exit /b 1
 )
 
-if not exist "%PROJECT_ROOT%\.env" (
-  copy "%PROJECT_ROOT%\.env.example" "%PROJECT_ROOT%\.env" >nul
-  echo Created .env from .env.example. Edit it if you need recommendations.
+if not exist "%PROJECT_ROOT%\backend\.env" (
+  copy "%PROJECT_ROOT%\.env.example" "%PROJECT_ROOT%\backend\.env" >nul
+  echo Created backend\.env from .env.example. Edit it if you need recommendations.
 )
 
 cd /d "%PROJECT_ROOT%"

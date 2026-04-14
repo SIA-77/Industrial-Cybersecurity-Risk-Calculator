@@ -62,7 +62,7 @@ This is the main quantitative output of the application.
 
 ## 5. Generate recommendations
 
-If `.env` contains `OPENAI_API_KEY`, you can use the `Recommendations` tab.
+If `backend/.env` contains `OPENAI_API_KEY`, you can use the `Recommendations` tab.
 
 The backend will:
 
@@ -72,6 +72,12 @@ The backend will:
 - return generated recommendations
 
 By default the report language is English. For different language please type additional comments fro AI before generating the report.
+
+The default setup uses an OpenAI ChatGPT-compatible endpoint defined in `backend/config/recommendations.json`. You can switch to another OpenAI model, a local OpenAI-compatible server, or another provider with a compatible API by editing:
+
+- `api_base_url`
+- `model`
+- `proxy` if needed
 
 ## 6. Export a report
 
@@ -107,16 +113,40 @@ Optional:
 
 ### `.env`
 
-Create a root `.env` file:
+Create `backend/.env`:
 
 ```env
 OPENAI_API_KEY=sk-your-key
 ```
 
-The backend reads:
+Recommended examples:
 
-1. `backend/.env`
-2. root `.env`
+Default OpenAI:
+
+```json
+{
+  "api_base_url": "https://api.openai.com/v1/chat/completions",
+  "model": "gpt-5-nano"
+}
+```
+
+Local OpenAI-compatible server:
+
+```json
+{
+  "api_base_url": "http://127.0.0.1:1234/v1/chat/completions",
+  "model": "local-model-name"
+}
+```
+
+Other provider with compatible API:
+
+```json
+{
+  "api_base_url": "https://provider.example.com/v1/chat/completions",
+  "model": "provider-model-name"
+}
+```
 
 ## Local workstation defaults
 
@@ -132,7 +162,7 @@ The repository is hardened for local use:
 
 Check that:
 
-- `.env` exists
+- `backend/.env` exists
 - `OPENAI_API_KEY` is set
 - the configured model endpoint is reachable
 

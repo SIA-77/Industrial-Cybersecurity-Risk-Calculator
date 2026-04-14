@@ -27,6 +27,92 @@ Copyright holder: Ian Suhih.
 
 ## Supported local deployment modes
 
+## Quick Start
+
+This is the shortest path for a first local run using the included release launchers.
+
+### Linux
+
+1. Create a working directory and enter it:
+
+```bash
+mkdir -p ~/projects
+cd ~/projects
+```
+
+2. Clone the repository over HTTPS:
+
+```bash
+git clone https://github.com/SIA-77/Industrial-Cybersecurity-Risk-Calculator.git
+cd Industrial-Cybersecurity-Risk-Calculator
+```
+
+3. Optional: if you want AI recommendations, open `backend/.env` in a text editor and add your key:
+
+```env
+OPENAI_API_KEY=sk-your-key
+```
+
+If you do not need recommendations, you can skip this step and run the application without an API key.
+
+4. Start the stack with the release launcher:
+
+```bash
+./release/linux/start-ics-risk.sh
+```
+
+5. Open:
+
+- frontend: `http://127.0.0.1:3000`
+- backend: `http://127.0.0.1:8000`
+
+6. Stop the stack when needed:
+
+```bash
+./release/linux/stop-ics-risk.sh
+```
+
+### Windows
+
+1. Create a working directory and enter it:
+
+```bat
+mkdir C:\projects
+cd /d C:\projects
+```
+
+2. Clone the repository over HTTPS:
+
+```bat
+git clone https://github.com/SIA-77/Industrial-Cybersecurity-Risk-Calculator.git
+cd /d Industrial-Cybersecurity-Risk-Calculator
+```
+
+3. Optional: if you want AI recommendations, open `backend\.env` in a text editor and add your key:
+
+```env
+OPENAI_API_KEY=sk-your-key
+```
+
+If you do not need recommendations, you can skip this step and run the application without an API key.
+
+4. Start the stack with the release launcher:
+
+```bat
+release\windows\start-ics-risk.bat
+```
+
+5. Open:
+
+- frontend: `http://127.0.0.1:3000`
+- backend: `http://127.0.0.1:8000`
+
+6. Stop the stack when needed:
+
+```bat
+release\windows\stop-ics-risk.bat
+```
+
 ### Recommended: Docker
 
 This is the default and most stable way to run the project.
@@ -38,11 +124,12 @@ Requirements:
 
 Quick start:
 
-1. Copy `.env.example` to `.env`
+1. Copy `.env.example` to `backend/.env`
 2. Fill `OPENAI_API_KEY` if you want recommendations
 3. Run:
 
 ```bash
+cp .env.example backend/.env
 docker compose up --build
 ```
 
@@ -64,10 +151,13 @@ These scripts are the practical executable artifacts for local deployment on Lin
 
 ## Configuration
 
-The backend reads `OPENAI_API_KEY` from:
+Recommended location for runtime secrets:
 
-1. `backend/.env`
-2. repository root `.env`
+- `backend/.env`
+
+This is the recommended path for Docker runs because the backend container mounts the `backend/` directory directly.
+
+The backend also has a fallback lookup for the repository root `.env`, but that should not be relied on for standard Docker deployment.
 
 Example:
 
@@ -79,6 +169,55 @@ Optional:
 
 ```env
 BACKEND_CORS_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
+```
+
+## Recommendation model configuration
+
+By default the project is configured to use an OpenAI ChatGPT-compatible endpoint through [backend/config/recommendations.json](/home/ian/risk_assesment_standalone/backend/config/recommendations.json:1).
+
+Default fields:
+
+```json
+{
+  "api_base_url": "https://api.openai.com/v1/chat/completions",
+  "model": "gpt-5-nano",
+  "proxy": ""
+}
+```
+
+To use a different OpenAI model, change only the `model` value:
+
+```json
+{
+  "api_base_url": "https://api.openai.com/v1/chat/completions",
+  "model": "gpt-4o-mini"
+}
+```
+
+To use a local OpenAI-compatible server such as LM Studio, vLLM, LocalAI, or Ollama behind a compatibility layer, point `api_base_url` to the local endpoint and set the model name exposed by that server:
+
+```json
+{
+  "api_base_url": "http://127.0.0.1:1234/v1/chat/completions",
+  "model": "local-model-name"
+}
+```
+
+To use another provider with an OpenAI-compatible API, set its endpoint and model identifier, then place that provider's API key into `backend/.env` as `OPENAI_API_KEY`:
+
+```json
+{
+  "api_base_url": "https://your-provider.example.com/v1/chat/completions",
+  "model": "provider-model-name"
+}
+```
+
+If your environment needs an outbound proxy for model access, set `proxy` in the same config file:
+
+```json
+{
+  "proxy": "http://proxy-host:port"
+}
 ```
 
 ## Documentation

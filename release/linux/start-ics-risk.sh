@@ -9,9 +9,9 @@ if ! command -v docker >/dev/null 2>&1; then
   exit 1
 fi
 
-if [ ! -f "${PROJECT_ROOT}/.env" ]; then
-  cp "${PROJECT_ROOT}/.env.example" "${PROJECT_ROOT}/.env"
-  echo "Created .env from .env.example. Edit it if you need recommendations."
+if [ ! -f "${PROJECT_ROOT}/backend/.env" ]; then
+  cp "${PROJECT_ROOT}/.env.example" "${PROJECT_ROOT}/backend/.env"
+  echo "Created backend/.env from .env.example. Edit it if you need recommendations."
 fi
 
 cd "${PROJECT_ROOT}"
