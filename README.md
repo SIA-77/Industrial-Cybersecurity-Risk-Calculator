@@ -47,19 +47,19 @@ git clone https://github.com/SIA-77/Industrial-Cybersecurity-Risk-Calculator.git
 cd Industrial-Cybersecurity-Risk-Calculator
 ```
 
-3. Optional: if you want AI recommendations, open `backend/.env` in a text editor and add your key:
+3. Start the stack with the release launcher:
+
+```bash
+./release/linux/start-ics-risk.sh
+```
+
+4. Optional: if you want AI recommendations, open `backend/.env` in a text editor and add your key:
 
 ```env
 OPENAI_API_KEY=sk-your-key
 ```
 
 If you do not need recommendations, you can skip this step and run the application without an API key.
-
-4. Start the stack with the release launcher:
-
-```bash
-./release/linux/start-ics-risk.sh
-```
 
 5. Open:
 
