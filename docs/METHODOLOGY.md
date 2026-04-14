@@ -2,12 +2,12 @@
 
 ## Summary
 
-The methodology implemented in this repository is a quantitative ICS/OT cyber risk model inspired by the public methodology described on `icscyberrisk.com` and expressed in code through:
+The methodology implemented in this repository is a quantitative ICS/OT cyber risk model derived from my PhD research and translated into a practical software implementation. It is built around:
 
-- protection layers with baseline PFD values
-- questionnaire-derived security posture signals
-- attacker type and capability modifiers
-- event-loss calculation for business impact
+protection layers with baseline PFD values
+questionnaire-based security posture indicators
+attacker type and capability modifiers
+event-loss calculations for business impact assessment
 
 ## 1. Layers of protection
 
