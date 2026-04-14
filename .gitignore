@@ -1,0 +1,15 @@
+.env
+backend/.env
+__pycache__/
+.pytest_cache/
+*.pyc
+tests/.artifacts/
+.venv/
+node_modules/
+frontend/node_modules/
+frontend/.next/
+dist/
+build/
+tmp_pptx/
+*.zip
+*.tar.gz

@@ -1,0 +1,456 @@
+{
+  "base_settings": {
+    "min_pfd": 0.005,
+    "max_pfd": 0.995,
+    "gamma": 1.2,
+    "attacker_multiplier": {
+      "low": 1.0,
+      "medium": 1.5,
+      "high": 2.0
+    }
+  },
+  "layers": {
+    "Corporate Network": {
+      "fixed_pfd": 0.1,
+      "is_corporate": true,
+      "aliases": [
+        "Корпоративная сеть",
+        "Red corporativa",
+        "企业网络"
+      ],
+      "weights_by_attacker": {
+        "external:low": 1.0,
+        "external:medium": 1.0,
+        "external:high": 1.0,
+        "internal:low": 0.2,
+        "internal:medium": 0.1,
+        "internal:high": 0.05
+      },
+      "description": "Risk is predefined, not computed from questionnaire"
+    },
+    "Generic layer": {
+      "criteria": {
+        "Secure configuration": {
+          "default": 0.7,
+          "weights_by_attacker": {
+            "external:low": 0.5,
+            "external:medium": 0.7,
+            "external:high": 0.8,
+            "internal:low": 0.7,
+            "internal:medium": 0.5,
+            "internal:high": 0.2
+          }
+        },
+        "Segmentation": {
+          "default": 0.9,
+          "weights_by_attacker": {
+            "external:low": 0.9,
+            "external:medium": 0.85,
+            "external:high": 0.75,
+            "internal:low": 0.9,
+            "internal:medium": 0.85,
+            "internal:high": 0.75
+          }
+        },
+        "Remote access": {
+          "default": 1.0,
+          "weights_by_attacker": {
+            "external:low": 0.95,
+            "external:medium": 0.9,
+            "external:high": 0.8,
+            "internal:low": 0.1,
+            "internal:medium": 0.05,
+            "internal:high": 0.01
+          }  
+        },
+        "Asset inventory": {
+          "default": 0.8,
+          "weights_by_attacker": {
+            "external:low": 0.8,
+            "external:medium": 0.7,
+            "external:high": 0.5,
+            "internal:low": 0.9,
+            "internal:medium": 0.8,
+            "internal:high": 0.7
+          }  
+        },
+        "Identity and access": {
+          "default": 0.85,
+          "weights_by_attacker": {
+            "external:low": 0.95,
+            "external:medium": 0.9,
+            "external:high": 0.8,
+            "internal:low": 0.9,
+            "internal:medium": 0.8,
+            "internal:high": 0.7
+          }  
+        },  
+        "Vulnerabilities in ICS": {
+          "default": 0.9,
+          "weights_by_attacker": {
+            "external:low": 0.95,
+            "external:medium": 0.9,
+            "external:high": 0.85,
+            "internal:low": 0.9,
+            "internal:medium": 0.7,
+            "internal:high": 0.5
+          }
+        },
+        "Monitoring and response": {
+          "default": 1.0,
+          "weights_by_attacker": {
+            "external:low": 0.6,
+            "external:medium": 0.8,
+            "external:high": 1.0,
+            "internal:low": 0.9,
+            "internal:medium": 0.95,
+            "internal:high": 1.0
+          }
+        },
+        "Physical access control": {
+          "default": 0.5,
+          "weights_by_attacker": {
+            "external:low": 0.05,
+            "external:medium": 0.05,
+            "external:high": 0.05,
+            "internal:low": 0.95,
+            "internal:medium": 0.9,
+            "internal:high": 0.8
+          }
+        }
+      },
+      "description": "Generic layer. Used as default layer for unrecognized layers in LOPA"
+    },
+    "ICS DMZ": {
+      "criteria": {
+        "Secure configuration": {
+          "default": 1.0,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.8,
+            "external:high": 0.6,
+            "internal:low": 0.2,
+            "internal:medium": 0.15,
+            "internal:high": 0.1
+          }
+        },
+        "DMZ organization": {
+          "default": 0.8,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.8,
+            "external:high": 0.6,
+            "internal:low": 0.2,
+            "internal:medium": 0.15,
+            "internal:high": 0.1
+          }
+        },
+        "Remote access": {
+          "default": 1.0,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.8,
+            "external:high": 0.6,
+            "internal:low": 0.2,
+            "internal:medium": 0.15,
+            "internal:high": 0.1
+          }  
+        },
+        "Segmentation": {
+          "default": 0.9,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.85,
+            "external:high": 0.75,
+            "internal:low": 0.2,
+            "internal:medium": 0.15,
+            "internal:high": 0.1
+          }
+        },
+        "Asset inventory": {
+          "default": 0.8,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.7,
+            "external:high": 0.5,
+            "internal:low": 0.2,
+            "internal:medium": 0.15,
+            "internal:high": 0.1
+          }
+        },
+        "Identity and access": {
+          "default": 0.85,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.8,
+            "external:high": 0.6,
+            "internal:low": 0.2,
+            "internal:medium": 0.15,
+            "internal:high": 0.1
+          }
+        },  
+        "Vulnerabilities in ICS": {
+          "default": 0.9,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.8,
+            "external:high": 0.6,
+            "internal:low": 0.2,
+            "internal:medium": 0.15,
+            "internal:high": 0.1
+          }
+        },
+        "Monitoring and response": {
+          "default": 1.0,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.8,
+            "external:high": 0.6,
+            "internal:low": 0.2,
+            "internal:medium": 0.15,
+            "internal:high": 0.1
+          }
+        },
+        "Physical access control": {
+          "default": 0.5,
+          "weights_by_attacker": {
+            "external:low": 0.01,
+            "external:medium": 0.01,
+            "external:high": 0.01,
+            "internal:low": 1.0,
+            "internal:medium": 1.0,
+            "internal:high": 1.0
+          }
+        }
+      },
+      "description": "Standard DMZ layer with exposed services to upper-level networks"
+    },
+    "DCS Layer": {
+      "criteria": {
+        "Secure configuration": {
+          "default": 0.7,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.8,
+            "external:high": 0.6,
+            "internal:low": 0.8,
+            "internal:medium": 0.6,
+            "internal:high": 0.4
+          }
+        },
+        "Segmentation": {
+          "default": 0.9,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.85,
+            "external:high": 0.75,
+            "internal:low": 0.1,
+            "internal:medium": 0.1,
+            "internal:high": 0.1
+          } 
+        },
+        "Remote access": {
+          "default": 1.0,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.8,
+            "external:high": 0.7,
+            "internal:low": 0.01,
+            "internal:medium": 0.01,
+            "internal:high": 0.01
+          }
+        },
+        "Asset inventory": {
+          "default": 0.8,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.7,
+            "external:high": 0.5,
+            "internal:low": 0.3,
+            "internal:medium": 0.2,
+            "internal:high": 0.1
+          } 
+        },
+        "Identity and access": {
+          "default": 0.85,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.8,
+            "external:high": 0.6,
+            "internal:low": 0.7,
+            "internal:medium": 0.5,
+            "internal:high": 0.3
+          }
+        },  
+        "Vulnerabilities in ICS": {
+          "default": 0.9,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.8,
+            "external:high": 0.6,
+            "internal:low": 0.8,
+            "internal:medium": 0.6,
+            "internal:high": 0.4
+          }
+        },
+        "Monitoring and response": {
+          "default": 1.0,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.9,
+            "external:high": 0.8,
+            "internal:low": 1.0,
+            "internal:medium": 0.9,
+            "internal:high": 0.8
+          }
+        },
+        "Engineering workstations": {
+          "default": 0.8,
+          "weights_by_attacker": {
+            "external:low": 1.0,
+            "external:medium": 0.8,
+            "external:high": 0.6,
+            "internal:low": 0.5,
+            "internal:medium": 0.3,
+            "internal:high": 0.1
+          }
+        },
+        "Physical access control": {
+          "default": 0.5,
+          "weights_by_attacker": {
+            "external:low": 0.05,
+            "external:medium": 0.05,
+            "external:high": 0.05,
+            "internal:low": 0.8,
+            "internal:medium": 0.7,
+            "internal:high": 0.6
+          }
+        }
+      },
+      "description": "Primary control system logic layer (Level 1–2)"
+    },
+    "SIS": {
+      "scenario_switch": {
+        "flag": "sis_is_integrated",
+        "values": {
+          "true": {
+            "description": "SIS is integrated with DCS (e.g., same network, Ethernet)",
+            "criteria": {
+              "Asset inventory": {
+                "default": 0.8,
+                "weights_by_attacker": {
+                  "external:low": 1.0,
+                  "external:medium": 0.7,
+                  "external:high": 0.5,
+                  "internal:low": 0.6,
+                  "internal:medium": 0.4,
+            	  "internal:high": 0.2
+                } 
+              },
+              "SIS protection": {
+                "default": 0.9,
+                "weights_by_attacker": {
+                  "external:low": 1.0,
+                  "external:medium": 0.8,
+                  "external:high": 0.6,
+                  "internal:low": 1.0,
+                  "internal:medium": 0.9,
+                  "internal:high": 0.8
+                }
+              },
+              "Identity and access": {
+                "default": 0.85,
+                "weights_by_attacker": {
+                  "external:low": 1.0,
+                  "external:medium": 0.8,
+                  "external:high": 0.6,
+                  "internal:low": 0.5,
+                  "internal:medium": 0.3,
+                  "internal:high": 0.1
+                }
+              },  
+              "Vulnerabilities in ICS": {
+                "default": 0.9,
+                "weights_by_attacker": {
+                  "external:low": 1.0,
+            	  "external:medium": 0.8,
+            	  "external:high": 0.6,
+            	  "internal:low": 0.9,
+             	  "internal:medium": 0.7,
+            	  "internal:high": 0.5
+                }
+              },
+              "Monitoring and response": {
+                "default": 1.0,
+                "weights_by_attacker": {
+                  "external:low": 1.0,
+                  "external:medium": 0.9,
+                  "external:high": 0.8,
+                  "internal:low": 1.0,
+                  "internal:medium": 0.9,
+                  "internal:high": 0.8
+                }
+              },
+              "Engineering workstations": {
+                "default": 0.8,
+                "weights_by_attacker": {
+                  "external:low": 1.0,
+            	  "external:medium": 0.8,
+            	  "external:high": 0.6,
+            	  "internal:low": 1.0,
+            	  "internal:medium": 0.8,
+            	  "internal:high": 0.6
+                }
+              }   
+            }
+          },
+          "false": {
+            "description": "SIS is isolated or uses serial/independent connection",
+            "criteria": {
+              "SIS protection": {
+                "default": 1.0,
+                "weights_by_attacker": {
+                  "internal:low": 1.0,
+                  "internal:medium": 0.9,
+                  "internal:high": 0.8
+                }
+              },
+              "Asset inventory": {
+                "default": 1.0,
+                "weights_by_attacker": {
+                  "internal:low": 1.0,
+                  "internal:medium": 0.8,
+            	  "internal:high": 0.6
+                }
+              }, 
+              "Physical access control": {
+                "default": 1.0,
+                "weights_by_attacker": {
+            	  "internal:low": 1.0,
+            	  "internal:medium": 1.0,
+            	  "internal:high": 1.0
+                }
+              },
+              "Engineering workstations": {
+                "default": 1.0,
+                "weights_by_attacker": {
+            	  "internal:low": 1.0,
+            	  "internal:medium": 0.9,
+            	  "internal:high": 0.8
+                }
+              },
+              "Vulnerabilities in ICS": {
+                "default": 0.9,
+                "weights_by_attacker": {
+                  "internal:low": 0.6,
+                  "internal:medium": 0.4,
+                  "internal:high": 0.2
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

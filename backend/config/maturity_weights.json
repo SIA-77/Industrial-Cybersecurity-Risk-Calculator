@@ -1,0 +1,150 @@
+{
+  "weights": {
+    "Asset inventory & classification": 0.8,
+    "Backup & recovery": 0.5,
+    "Endpoint hardening": 1.0,
+    "Engineering workstations & tools": 0.8,
+    "ICS DMZ architecture": 1.0,
+    "Identity & access management": 0.9,
+    "Monitoring & logging": 1.0,
+    "Physical & environmental protection": 0.7,
+    "Remote access": 1.0,
+    "Safety system separation (SIS/BPCS)": 1.0,
+    "Segmentation & zoning (IEC 62443)": 0.7,
+    "Vulnerability & patch management": 1.0,
+    "Governance & roles": 0.7,
+    "Policies & standards": 0.9,
+    "Risk assessment": 0.8,
+    "Training & awareness": 0.9,
+    "Incident response": 0.6,
+    "Business continuity & recovery": 0.9,
+    "Change management": 1.0,
+    "Third-party & vendor management": 0.6,
+    "Asset lifecycle management": 0.9,
+    "Audit & compliance": 1.0,
+    "Metrics & continuous improvement": 0.8,
+    "Data governance & classification": 0.6
+  },
+  "aliases": {
+    "Asset inventory & classification": [
+      "Инвентаризация и классификация активов",
+      "Inventario y clasificación de activos",
+      "资产清单与分类"
+    ],
+    "Backup & recovery": [
+      "Резервное копирование и восстановление",
+      "Respaldo y recuperación",
+      "备份与恢复"
+    ],
+    "Endpoint hardening": [
+      "Укрепление конечных устройств",
+      "Endurecimiento de endpoints",
+      "终端加固"
+    ],
+    "Engineering workstations & tools": [
+      "Инженерные рабочие места и инструменты",
+      "Estaciones de ingeniería y herramientas",
+      "工程师工作站与工具"
+    ],
+    "ICS DMZ architecture": [
+      "Архитектура DMZ АСУТП",
+      "Arquitectura DMZ de ICS",
+      "ICS DMZ 架构"
+    ],
+    "Identity & access management": [
+      "Управление учетными записями и доступом",
+      "Gestión de identidades y accesos",
+      "身份与访问管理"
+    ],
+    "Monitoring & logging": [
+      "Мониторинг и журналирование",
+      "Monitoreo y registro",
+      "监测与日志"
+    ],
+    "Physical & environmental protection": [
+      "Физическая и средовая защита",
+      "Protección física y ambiental",
+      "物理与环境防护"
+    ],
+    "Remote access": [
+      "Удаленный доступ",
+      "Acceso remoto",
+      "远程访问"
+    ],
+    "Safety system separation (SIS/BPCS)": [
+      "Разделение систем безопасности (SIS/BPCS)",
+      "Separación de sistemas de seguridad (SIS/BPCS)",
+      "安全系统隔离（SIS/BPCS）"
+    ],
+    "Segmentation & zoning (IEC 62443)": [
+      "Сегментация и зоны (IEC 62443)",
+      "Segmentación y zonificación (IEC 62443)",
+      "分区与隔离（IEC 62443）"
+    ],
+    "Vulnerability & patch management": [
+      "Уязвимости и патч-менеджмент",
+      "Gestión de vulnerabilidades y parches",
+      "漏洞与补丁管理"
+    ],
+    "Governance & roles": [
+      "Управление и роли",
+      "Gobernanza y roles",
+      "治理与角色"
+    ],
+    "Policies & standards": [
+      "Политики и стандарты",
+      "Políticas y estándares",
+      "政策与标准"
+    ],
+    "Risk assessment": [
+      "Оценка рисков",
+      "Evaluación de riesgos",
+      "风险评估"
+    ],
+    "Training & awareness": [
+      "Обучение и осведомленность",
+      "Capacitación y concienciación",
+      "培训与意识"
+    ],
+    "Incident response": [
+      "Реагирование на инциденты",
+      "Respuesta a incidentes",
+      "事件响应"
+    ],
+    "Business continuity & recovery": [
+      "Непрерывность и восстановление",
+      "Continuidad y recuperación",
+      "业务连续性与恢复"
+    ],
+    "Change management": [
+      "Управление изменениями",
+      "Gestión de cambios",
+      "变更管理"
+    ],
+    "Third-party & vendor management": [
+      "Управление подрядчиками и вендорами",
+      "Gestión de terceros y proveedores",
+      "第三方与供应商管理"
+    ],
+    "Asset lifecycle management": [
+      "Управление жизненным циклом активов",
+      "Gestión del ciclo de vida de activos",
+      "资产生命周期管理"
+    ],
+    "Audit & compliance": [
+      "Аудит и соответствие",
+      "Auditoría y cumplimiento",
+      "审计与合规"
+    ],
+    "Metrics & continuous improvement": [
+      "Метрики и непрерывное улучшение",
+      "Métricas y mejora continua",
+      "指标与持续改进"
+    ],
+    "Data governance & classification": [
+      "Управление данными и классификация",
+      "Gobernanza y clasificación de datos",
+      "数据治理与分类"
+    ]
+  }
+}

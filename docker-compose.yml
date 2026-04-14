@@ -1,0 +1,36 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      args:
+        HTTP_PROXY: http://172.18.0.1:12334
+        HTTPS_PROXY: http://172.18.0.1:12334
+        NO_PROXY: localhost,127.0.0.1,172.17.0.1,172.18.0.0/16
+    environment:
+        HTTP_PROXY: http://172.17.0.1:12334
+        HTTPS_PROXY: http://172.17.0.1:12334
+        NO_PROXY: localhost,127.0.0.1,172.17.0.1,172.18.0.0/16
+        BACKEND_CORS_ORIGINS: http://localhost:3000,http://127.0.0.1:3000
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./backend:/app
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        HTTP_PROXY: http://172.17.0.1:12334
+        HTTPS_PROXY: http://172.17.0.1:12334
+        NO_PROXY: localhost,127.0.0.1,172.17.0.1,172.18.0.0/16
+    environment:
+        HTTP_PROXY: http://172.17.0.1:12334
+        HTTPS_PROXY: http://172.17.0.1:12334
+        NO_PROXY: localhost,127.0.0.1,172.17.0.1,172.18.0.0/16
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    restart: always

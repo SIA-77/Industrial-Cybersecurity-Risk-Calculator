@@ -1,0 +1,9 @@
+{
+  "api_base_url": "https://api.openai.com/v1/chat/completions",
+  "model": "gpt-5-nano",
+  "system_prompt": "You are a cybersecurity advisor for ICS risk mitigation. The report requirements are defined in config/report_requirements.md and are provided in the request data as report_requirements; follow those requirements strictly.",
+  "report_requirements_path": "config/report_requirements.md",
+  "user_prompt": "",
+  "timeout_seconds": 300,
+  "proxy": ""
+}

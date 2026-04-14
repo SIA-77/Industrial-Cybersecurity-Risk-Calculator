@@ -1,0 +1,69 @@
+Group,Group Name,Question ID,Question,Score,Max Score,Scoring Guidance,Evidence
+1,Asset inventory & classification,1.1,"All ICS assets (hardware, software, firmware) are inventoried with owners and criticality.",1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+1,Asset inventory & classification,1.2,Network diagrams and data flows for ICS are current and reviewed at least annually.,2,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+1,Asset inventory & classification,1.3,Asset inventory is integrated with configuration and patch management records.,1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+2,Segmentation & zoning (IEC 62443),2.1,ICS zones and conduits are defined with documented trust boundaries.,1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+2,Segmentation & zoning (IEC 62443),2.2,"Traffic between zones is restricted to documented, required flows only.",1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+2,Segmentation & zoning (IEC 62443),2.3,Critical zones can operate safely when connections to other zones are disrupted.,1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+3,ICS DMZ architecture,3.1,ICS DMZ is implemented with firewall(s) and strict ruleset management.,2,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+3,ICS DMZ architecture,3.2,Direct communications between enterprise and ICS are eliminated in favor of DMZ jump/intermediate systems.,2,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+3,ICS DMZ architecture,3.3,"DMZ services are hardened, monitored, and not exposed directly to the Internet.",1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+4,Remote access,4.1,Remote access to ICS uses MFA and is limited to approved users and time windows.,0,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+4,Remote access,4.2,Remote access is brokered through managed jump hosts with session recording.,3,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+4,Remote access,4.3,Emergency remote access procedures are controlled and logged.,2,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+5,Identity & access management,5.1,Unique user accounts are enforced for ICS operations and engineering.,2,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+5,Identity & access management,5.2,Privileged access is controlled by role and reviewed at least quarterly.,0,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+5,Identity & access management,5.3,Default/vendor accounts are removed or secured and monitored.,1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+6,Endpoint hardening,6.1,"ICS endpoints follow secure configuration baselines (OS, services, ports, BIOS/UEFI).",1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+6,Endpoint hardening,6.2,"Unused services and ports are disabled on controllers, HMIs, and servers.",1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+6,Endpoint hardening,6.3,Secure boot and device control are used where supported.,0,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+7,Vulnerability & patch management,7.1,ICS vulnerability scanning or passive monitoring is performed with change approval.,1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+7,Vulnerability & patch management,7.2,Patching is risk-based with documented exceptions and compensating controls.,1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+7,Vulnerability & patch management,7.3,Vendor advisories are tracked and assessed within defined SLAs.,0,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+8,Monitoring & logging,8.1,ICS network traffic is monitored with IDS/monitoring appropriate for OT.,0,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+8,Monitoring & logging,8.2,Security logs from ICS/DMZ are centralized and retained per policy.,1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+8,Monitoring & logging,8.3,Alerting and detection rules cover common ICS attack techniques.,0,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+9,Backup & recovery,9.1,"Backups of ICS configurations, logic, and critical servers are performed regularly.",2,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+9,Backup & recovery,9.2,Backups are stored offline or in a segmented repository with access controls.,2,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+9,Backup & recovery,9.3,Restore procedures are tested at least annually.,1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+10,Engineering workstations & tools,10.1,"Engineering workstations are dedicated, hardened, and not used for general IT browsing.",1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+10,Engineering workstations & tools,10.2,Application allowlisting is applied to engineering workstations.,0,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+10,Engineering workstations & tools,10.3,Portable media use is controlled and scanned before use in ICS.,0,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+11,Safety system separation (SIS/BPCS),11.1,"SIS and BPCS are segmented with minimal, controlled communications.",1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+11,Safety system separation (SIS/BPCS),11.2,SIS modifications require multi-person approval and logging.,1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+11,Safety system separation (SIS/BPCS),11.3,SIS engineering and operator stations are hardened and monitored.,1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+11,Safety system separation (SIS/BPCS),11.4,SIS controllers are hardened and monitored.,1,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+12,Physical & environmental protection,12.3,"Physical access to ICS cabinets, network equipment, and control rooms is restricted and logged.",2,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+12,Physical & environmental protection,13.3,"Environmental controls (power, HVAC, fire suppression) for ICS rooms are monitored.",0,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+12,Physical & environmental protection,14.3,Visitor access to ICS areas is controlled and escorted.,2,3,"0=Not implemented;1=Partially implemented;2=Implemented but inconsistent;3=Implemented, documented, and monitored","Policies, configurations, logs, tickets, or audit evidence."
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,0.1,0.444444444444444,,,,
+,,1,0.00444444444444444,,,,
+,,0.05,,,,,
+,Считаем средный балл,,0.10,,,criteria_score = Σ((score_ii) / (max_score_i)*weight_i),
+,CDF,,0.00444444444444444,,,"CDF = clamp(criteria_score / attacker_multiplier, 0..1)",
+,"CDF_safe = max(CDF, 0.01)
+",,,,,,
+,,,9.7232441275447E-06,,,"PFD_eff_y1 = 1 - ( 1-PFD_base)^(1 / CDF_safe)
+",
+,,,,,,,
+,Weight,0.01,,,,,
+,,,,,,PFD_eff_y1 = PFD_base ^ (CDF_safe ^ γ),
+,гамма,0.9,0.97737550296415,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,PFD base,0.1,,,,,
+,CDF,1,0.1,,,,

@@ -1,0 +1,74 @@
+{
+  "Segmentation": [
+    "Segmentation & zoning (IEC 62443)",
+    "Segmentación y zonificación (IEC 62443)",
+    "Сегментация и зоны (IEC 62443)",
+    "分区与隔离（IEC 62443）"
+  ],
+  "DMZ organization": [
+    "ICS DMZ architecture",
+    "Arquitectura DMZ de ICS",
+    "ICS DMZ 架构",
+    "Архитектура DMZ АСУТП"
+  ],
+  "Remote access": [
+    "Remote access",
+    "Acceso remoto",
+    "Удаленный доступ",
+    "远程访问"
+  ],
+  "Vulnerabilities in ICS": [
+    "Vulnerability & patch management",
+    "Gestión de vulnerabilidades y parches",
+    "Уязвимости и патч-менеджмент",
+    "漏洞与补丁管理"
+  ],
+  "Secure configuration": [
+    "Endpoint hardening",
+    "Endurecimiento de endpoints",
+    "Укрепление конечных устройств",
+    "终端加固"
+  ],
+  "Monitoring and response": [
+    "Monitoring & logging",
+    "Monitoreo y registro",
+    "Мониторинг и журналирование",
+    "监测与日志"
+  ],
+  "SIS protection": [
+    "Safety system separation (SIS/BPCS)",
+    "Separación de sistemas de seguridad (SIS/BPCS)",
+    "Разделение систем безопасности (SIS/BPCS)",
+    "安全系统隔离（SIS/BPCS）"
+  ],
+  "Asset inventory": [
+    "Asset inventory & classification",
+    "Inventario y clasificación de activos",
+    "Инвентаризация и классификация активов",
+    "资产清单与分类"
+  ],
+  "Identity and access": [
+    "Identity & access management",
+    "Gestión de identidades y accesos",
+    "Управление учетными записями и доступом",
+    "身份与访问管理"
+  ],
+  "Backup and recovery": [
+    "Backup & recovery",
+    "Respaldo y recuperación",
+    "Резервное копирование и восстановление",
+    "备份与恢复"
+  ],
+  "Physical access control": [
+    "Physical & environmental protection",
+    "Protección física y ambiental",
+    "Физическая и средовая защита",
+    "物理与环境防护"
+  ],
+  "Engineering workstations": [
+    "Engineering workstations & tools",
+    "Estaciones de ingeniería y herramientas",
+    "Инженерные рабочие места и инструменты",
+    "工程师工作站与工具"
+  ]
+}
